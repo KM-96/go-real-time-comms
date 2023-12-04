@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	poll.Poll()
+	poll.ShortPoll()
 }

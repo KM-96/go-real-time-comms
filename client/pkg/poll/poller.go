@@ -14,7 +14,7 @@ const (
 	PollDurationInSeconds = 5
 )
 
-func Poll() {
+func ShortPoll() {
 	ticker := time.NewTicker(PollDurationInSeconds * time.Second)
 	defer ticker.Stop()
 

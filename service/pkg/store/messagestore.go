@@ -16,7 +16,13 @@ func GetAllMessages() *[]model.Message {
 }
 
 func GetMessagesAfter(t time.Time) *[]model.Message {
-	return getMessagesAfter(t)
+	var result []model.Message
+	for _, msg := range messages {
+		if msg.Timestamp.After(t) {
+			result = append(result, msg)
+		}
+	}
+	return &result
 }
 
 func AddMessage(m *model.Message) {
@@ -40,14 +46,4 @@ func PrintMessages() {
 		fmt.Printf("%+v", m)
 		fmt.Println()
 	}
-}
-
-func getMessagesAfter(t time.Time) *[]model.Message {
-	var result []model.Message
-	for _, msg := range messages {
-		if msg.Timestamp.After(t) {
-			result = append(result, msg)
-		}
-	}
-	return &result
 }

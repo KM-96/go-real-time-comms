@@ -6,7 +6,7 @@ The items mentioned in the topics section includes the different options that wi
 Application
 There are 2 services as part of the application: a Client and a Server
 - Client: A service that expects real time updates from a Server. The client will employ different strategies discussed in the topics section to get data from the Server.
-- Server: A service that takes an input from the User and is responsible to communicate the data to the client.
+- Server: A service that takes an input from the console of the user and is responsible to communicate the data to the client.
 
 ## Topics
 
